@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Guardian URL: AI Powered-Ultimate Shield",
+  "version": "2.0",
+  "description": "AI Powered Real-time protection against scams using Google Safe Browsing, VirusTotal, and Community Reports.",
+  "permissions": ["tabs", "storage", "alarms", "contextMenus", "notifications"],
+  "host_permissions": [
+    "<all_urls>",
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "scam.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "128": "scam.png"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
